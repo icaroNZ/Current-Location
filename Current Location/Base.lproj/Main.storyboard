@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Current_Location" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqs-59-dkU">
+                                <rect key="frame" x="-3" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Start Update" id="VmR-ps-xUg"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="O02-ab-Ml3"/>
+                                    <barButtonItem title="Stop Update" style="plain" id="NvO-P3-Oie">
+                                        <connections>
+                                            <action selector="stopUpdate:" destination="BYZ-38-t0r" id="zUI-lw-i2m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5bu-6c-xAE"/>
+                                    <barButtonItem title="Update Once" id="uzU-aB-Y3E">
+                                        <connections>
+                                            <action selector="updateOnce:" destination="BYZ-38-t0r" id="i0G-ir-HUk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-yK-egR">
+                                <rect key="frame" x="16" y="44" width="568" height="333"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="333" id="5wS-2s-5hc"/>
+                                </constraints>
+                                <string key="text">City: 
+Code:
+State:
+Country:</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bcW-yK-egR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3U1-mX-53M"/>
+                            <constraint firstItem="bcW-yK-egR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6vq-8m-WQb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fqs-59-dkU" secondAttribute="trailing" constant="-13" id="K1q-N6-Xy7"/>
+                            <constraint firstItem="Fqs-59-dkU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-19" id="bDM-Dc-wr5"/>
+                            <constraint firstAttribute="width" secondItem="bcW-yK-egR" secondAttribute="width" id="meq-sC-Q5u"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bcW-yK-egR" secondAttribute="bottom" constant="223" id="wqa-xT-GB7"/>
+                            <constraint firstItem="Fqs-59-dkU" firstAttribute="bottom" secondItem="bcW-yK-egR" secondAttribute="top" id="xpH-HZ-ydG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="meq-sC-Q5u"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="logs" destination="bcW-yK-egR" id="C1G-FH-e6J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

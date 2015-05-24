@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20DC5E411B11BA1700755FD5 /* helper_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC5E401B11BA1700755FD5 /* helper_location.swift */; };
 		20F2EC391B11A2BB0029F07D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2EC381B11A2BB0029F07D /* AppDelegate.swift */; };
 		20F2EC3C1B11A2BB0029F07D /* Current_Location.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20F2EC3A1B11A2BB0029F07D /* Current_Location.xcdatamodeld */; };
 		20F2EC3E1B11A2BB0029F07D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2EC3D1B11A2BB0029F07D /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20DC5E401B11BA1700755FD5 /* helper_location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helper_location.swift; sourceTree = "<group>"; };
 		20F2EC331B11A2BB0029F07D /* Current Location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Current Location.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F2EC371B11A2BB0029F07D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F2EC381B11A2BB0029F07D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		20F2EC351B11A2BB0029F07D /* Current Location */ = {
 			isa = PBXGroup;
 			children = (
+				20DC5E401B11BA1700755FD5 /* helper_location.swift */,
 				20F2EC381B11A2BB0029F07D /* AppDelegate.swift */,
 				20F2EC3D1B11A2BB0029F07D /* ViewController.swift */,
 				20F2EC3F1B11A2BB0029F07D /* Main.storyboard */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DC5E411B11BA1700755FD5 /* helper_location.swift in Sources */,
 				20F2EC3E1B11A2BB0029F07D /* ViewController.swift in Sources */,
 				20F2EC3C1B11A2BB0029F07D /* Current_Location.xcdatamodeld in Sources */,
 				20F2EC391B11A2BB0029F07D /* AppDelegate.swift in Sources */,
@@ -415,6 +419,7 @@
 				20F2EC571B11A2BC0029F07D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20F2EC581B11A2BC0029F07D /* Build configuration list for PBXNativeTarget "Current LocationTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				20F2EC5A1B11A2BC0029F07D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

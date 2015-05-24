@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var logs: UITextView!
+    
+    
+    let locationHelper = LocationHelper()
+
+    @IBAction func updateOnce(sender: UIBarButtonItem) {
+    }
+    @IBAction func stopUpdate(sender: UIBarButtonItem) {
+    }
+    @IBAction func startUpdate(sender: UIBarButtonItem) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        locationHelper.start()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
